@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-# blank = false, means the field is required, null refers to the val in the db
 
 
 class Product(models.Model):
