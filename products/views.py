@@ -16,12 +16,8 @@ def product_view(request, *args, **kwargs):
 
 
 def product_form_view(request):
-    form = ProductCreateForm(request.POST or None)
+    print(request)
+    my_new_title = request.POST.get('title')
+    print(my_new_title)
 
-    if form.is_valid():
-        form.save()
-    context = {
-        'form': form
-    }
-
-    return render(request, "form.html", context)
+    return render(request, "form.html", {})
